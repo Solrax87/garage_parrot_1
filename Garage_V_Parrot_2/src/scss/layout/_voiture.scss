@@ -1,0 +1,66 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.section-voiture {
+    margin-bottom: 4rem;
+    p, h3 {
+    color: inherit;
+    margin: 0;
+    } 
+    p {
+        font-size: 2rem;
+    }
+    
+}
+.separation-grid {
+    @include m.tablet {
+        @include m.grid (2, 2rem)
+    }
+    
+}
+
+.option-vehicule {
+    li {
+    list-style: none;
+    text-decoration: none;
+
+    .option1 {
+        width: 1rem;
+        }
+    }
+    li:first-of-type {
+        margin: 1rem;
+        text-transform: uppercase;
+    }
+
+    .fiche-technique {
+        text-align: center;
+    }
+    h2 {
+        padding: inherit;
+    }
+}
+.table{
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+    color: v.$grey;
+    padding-bottom: 3rem;
+    font-weight: bold;
+
+    
+    th, td {
+        padding: 1.5rem;
+        border: 1px solid #dddddd;
+        text-align: center;
+    }
+}
+.galerie-vehicule {
+    display: flex; 
+       
+}
+.img1 {
+    display: inline-block;
+    margin-right: 1rem;
+}
+

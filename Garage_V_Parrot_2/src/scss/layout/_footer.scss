@@ -1,0 +1,41 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+@include m.tablet {
+    .container-footer {
+        @include m.grid(4, 0);
+        text-align: left;
+    }
+}
+.footer {
+    background-color: v.$grey;
+
+    .titre-h {
+        color: v.$yellow;
+    }
+}
+p, a {
+    text-decoration: none;
+    color: v.$white;
+    font-size: 1.4rem;
+}
+
+.container-footer {
+    justify-content: center;
+    text-align: center;
+
+    img {
+        width: 12rem;
+        height: 12rem;
+        border-radius: 5%;
+        display: block;
+        margin: 0 auto;
+    }
+    .info-util,
+    .logo, .horaires {
+        padding: 4rem;
+        color: v.$white;
+
+    }
+}
+

@@ -1,0 +1,50 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.section-services {
+    text-align: center;
+    padding: 4rem;
+
+    .titre-services-h3 {
+        text-transform: uppercase;
+        text-decoration: underline;
+        
+    }
+    .titre-services {
+        color: v.$yellow;
+        text-transform: uppercase;
+    }
+    img {
+        border: 2px solid darken(v.$green, 10);
+    }
+}
+.container-services {
+    @include m.tablet {
+        display: flex;
+        gap: 4rem;
+    }
+        
+    .service-nettoyage,
+    .service-location {
+        padding-bottom: 4rem;
+    }
+   
+}
+.btn-green-centrer {
+    text-transform: uppercase;
+    @include m.btn(v.$green);
+    @include m.tablet {
+        width: 30rem;
+        display: block;
+        margin: 0 auto;
+    }
+
+}
+.btn-green {
+    text-transform: uppercase;
+    @include m.btn(v.$green);
+    @include m.tablet {
+        width: 30rem;
+        display: block;
+    }
+}

@@ -1,0 +1,94 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+/* esconde elemento para moviles */
+@media only screen and (max-width: 768px) {
+    .admin-section {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .admin-section-text {
+        display: none;
+    }
+}
+
+
+.alerte {
+    padding: 1rem;
+    text-align: center;
+    color: v.$white;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: .8rem 0;
+
+    &.erreur {
+        background-color: v.$red;
+    }
+
+    &.succes {
+        background-color: v.$green;
+    }
+}
+
+table.vehicules-all {
+    margin-top: 3rem;
+    width: 100%;
+    border-spacing: 0;
+
+    thead {
+        background-color: v.$green;
+
+        th {
+            color: v.$white;
+            padding: 2rem;
+            
+        }
+    }
+
+    .image-table {
+        width: 10rem;
+    }
+    .btn-red {
+        @include m.btn(v.$red);
+        width: 100%;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+    .btn-blue {
+        @include m.btn(v.$blue);
+        margin-left: 10rem;
+    }
+
+}
+
+.image-small {
+    width: 10rem;
+}
+
+.w-100 {
+    width: 100%;
+    margin-left: 10rem;
+}
+
+.formulaire-centre {
+    width: 34%;
+    max-width: 120rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.btn-admin {
+    @include m.tablet {
+        @include m.grid(3, 1rem)
+    }
+    width: 20%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.text-importante {
+    color: v.$red;
+    font-size: 2rem;
+    font-style: italic;
+}

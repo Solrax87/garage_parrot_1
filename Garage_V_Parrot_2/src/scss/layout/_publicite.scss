@@ -1,0 +1,57 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+@include m.tablet {
+    .all-publicite {
+        @include m.grid(3, 2rem);
+    }
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 3rem;
+}
+
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 3rem;
+    text-transform: uppercase;
+}
+
+.publicite {
+    background-color: lighten(v.$orange-light, 5);
+    border: 2px solid darken(v.$green, 10);
+    margin-bottom: 2rem;
+
+    .container-publicite {
+        padding: 2rem;
+    }
+    h3, h4 {
+        margin: 0;
+        color: v.$black;
+        padding-top: 2rem;
+    }
+
+    
+}
+.prix {
+    color: v.$green;
+    font-weight: bold;
+    font-size: 3rem;  
+    margin: 0;  
+}
+.btn-yellow {
+    @include m.btn(v.$yellow);
+}
+
+
+.container-section {
+    margin-bottom: 3rem;
+}
+

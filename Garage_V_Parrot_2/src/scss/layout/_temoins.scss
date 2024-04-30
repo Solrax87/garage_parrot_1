@@ -1,0 +1,66 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+@include m.tablet {
+    .temoins {
+        @include m.grid (3, 2rem);
+        margin: 2rem;
+    }
+}
+
+.temoins {
+    margin: 2rem;
+   .temoin {
+    background-color: lighten(v.$grey, 25);
+    border: 2px solid darken(v.$grey, 10);
+    padding: 2rem;
+    margin: 2rem;
+    }
+    .signature {
+            text-align: end;
+    }     
+
+}
+.formulaire {
+    background-color: lighten(v.$grey, 25);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 4rem;
+    border: 2px solid darken(v.$grey, 10);
+
+
+
+    .formulaire-temoins label {
+        font-weight: bold;
+    }
+    .formulaire-temoins input {
+        border: 2px solid darken(v.$grey, 10);
+        border-radius: 3px;
+    }
+    .formulaire-temoins textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 2px solid darken(v.$grey, 10);
+        border-radius: 5px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    h2 {
+        color: v.$blue;
+    }   
+
+}
+
